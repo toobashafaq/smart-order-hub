@@ -5,37 +5,9 @@ Big e-commerce companies need a reliable and scalable order management system th
 
 🧱 Architecture:
 
+![image](https://github.com/user-attachments/assets/675ef1a1-6b3d-4482-83bd-f1bd3aece30a)![Uploading image.png…]()
 
-[Frontend (HTML/JS/Bootstrap)]
 
-        |
-        
-[API Gateway (Spring Cloud Gateway)]
-
-        |
-        
--------------------------------------
-
-|            |            |         |
-
-Order     Inventory     Payment   Analytics
-Service    Service       Service   Service
-(Spring    (Spring      (Spring    (Spring
-Boot)      Boot)        Boot)      Boot)
-        ↕ Kafka topics ↕
-      [Kafka (event broker)]
-      
-            ↕
-            
-     [MySQL DB for each microservice]
-     
-            ↕
-            
-     [Central Config Server (Spring Cloud Config)]
-     
-            ↕
-            
-     [Eureka Discovery Server]
      
 
 
