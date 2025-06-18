@@ -1,26 +1,42 @@
 SmartOrderHub – Real-Time Order Management & Analytics System
+
 🎯 Problem Statement:
 Big e-commerce companies need a reliable and scalable order management system that handles millions of orders daily, offers real-time processing, and gives live insights. This system should support auto-scaling, event-driven communication, and data consistency across services.
 
 🧱 Architecture:
+
+
 [Frontend (HTML/JS/Bootstrap)]
+
         |
+        
 [API Gateway (Spring Cloud Gateway)]
+
         |
+        
 -------------------------------------
+
 |            |            |         |
+
 Order     Inventory     Payment   Analytics
 Service    Service       Service   Service
 (Spring    (Spring      (Spring    (Spring
 Boot)      Boot)        Boot)      Boot)
         ↕ Kafka topics ↕
       [Kafka (event broker)]
+      
             ↕
+            
      [MySQL DB for each microservice]
+     
             ↕
+            
      [Central Config Server (Spring Cloud Config)]
+     
             ↕
+            
      [Eureka Discovery Server]
+     
 
 
      🔧 Microservices Breakdown:
